@@ -1,0 +1,39 @@
+{
+  "image_shape": [
+    256,
+    256
+  ],
+  "original_size_bytes": 65536,
+  "huffman": {
+    "original_size_bytes": 65536,
+    "compressed_size_bytes": 54173,
+    "compression_ratio": 1.2098,
+    "space_saving_percent": 17.34,
+    "bits_per_pixel": 6.6128,
+    "entropy_bits_per_symbol": 6.5753,
+    "avg_code_length": 6.6128,
+    "unique_symbols": 188,
+    "lossless": true,
+    "sample_codes": {
+      "29": "1110",
+      "30": "010111",
+      "32": "110101010010000",
+      "33": "110101010010001",
+      "34": "11010101001001",
+      "35": "10011000000",
+      "36": "10011000001",
+      "37": "10011000010",
+      "38": "10011000011",
+      "39": "0101100011"
+    }
+  },
+  "arithmetic": {
+    "original_size_bytes": 65536,
+    "compressed_size_bytes": 53865,
+    "compression_ratio": 1.2167,
+    "space_saving_percent": 17.81,
+    "bits_per_pixel": 6.5753,
+    "unique_symbols": 188,
+    "lossless": true
+  }
+}
