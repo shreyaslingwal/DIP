@@ -159,7 +159,7 @@ keeps flat regions unchanged and boosts only the edges (A = 2.5 output is also s
 - Salt-and-pepper noise (3%) → **Median filter** removes it, edges stay sharp.
 - Gaussian noise (σ = 0.08) → **Mean filter** reduces it, with slight blurring.
 
-## Comparison Summary (from the PDF)
+## Comparison Summary
 
 | Filter | Domain | Linear? | Effect | Best used for |
 |---|---|---|---|---|
