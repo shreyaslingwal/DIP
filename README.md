@@ -206,33 +206,3 @@ per symbol, so it can get closer to the entropy limit.
 Both reconstructed images are **identical to the original** (lossless — verified
 in code with `np.array_equal`, result `lossless: true` for both).
 
-### Measured results (256×256 grayscale image, 65,536 pixels)
-
-| Metric | Original | Huffman | Arithmetic |
-|---|---:|---:|---:|
-| Size | 65,536 bytes | **54,173 bytes** | **53,865 bytes** |
-| Compression ratio | 1.0000 | **1.2098** | **1.2167** |
-| Space saving | — | 17.34 % | **17.81 %** |
-| Bits per pixel | 8.0000 | 6.6128 | **6.5753** |
-| Lossless? | — | ✅ Yes | ✅ Yes |
-
-Image entropy = **6.5753 bits/symbol**. Huffman's average code length is
-6.61 bits (just above entropy, because codes must be a whole number of bits),
-while arithmetic coding reaches **6.5753 bits/pixel — exactly the entropy** in
-this run — which is why it gives the slightly better ratio. Full numbers are in
-`2_Image_Compression/outputs/compression_results.json`.
-
-| | Huffman | Arithmetic |
-|---|---|---|
-| Code per symbol | Integer-length, prefix-free | Fractional (whole message = one number) |
-| Side information to store | Huffman tree / code table | Symbol frequency table |
-| Speed | Faster | Slower |
-| Ratio in this experiment | 1.2098 | **1.2167** |
-
----
-
-## Notes
-
-- This is a practical coding assignment — no handwritten/written report is included, as instructed.
-- To create the GitHub repository: create an empty repo on github.com, then run
-  `git init && git add . && git commit -m "DIP: HSI filtering + Huffman & Arithmetic compression" && git remote add origin <repo-url> && git push -u origin main`
